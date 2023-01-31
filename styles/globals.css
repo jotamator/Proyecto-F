@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css?family=Acme|Lobster");
+:root {
+  --max-width: 1100px;
+  --border-radius: 12px;
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+
+  --primary-glow: conic-gradient(
+    from 180deg at 50% 50%,
+    #16abff33 0deg,
+    #0885ff33 55deg,
+    #54d6ff33 120deg,
+    #0071ff33 160deg,
+    transparent 360deg
+  );
+  --secondary-glow: radial-gradient(
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
+
+  --tile-start-rgb: 239, 245, 249;
+  --tile-end-rgb: 228, 232, 233;
+  --tile-border: conic-gradient(
+    #00000080,
+    #00000040,
+    #00000030,
+    #00000020,
+    #00000010,
+    #00000010,
+    #00000080
+  );
+
+  --callout-rgb: 238, 240, 241;
+  --callout-border-rgb: 172, 175, 176;
+  --card-rgb: 180, 185, 188;
+  --card-border-rgb: 131, 134, 135;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+
+    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
+    --secondary-glow: linear-gradient(
+      to bottom right,
+      rgba(1, 65, 255, 0),
+      rgba(1, 65, 255, 0),
+      rgba(1, 65, 255, 0.3)
+    );
+
+    --tile-start-rgb: 2, 13, 46;
+    --tile-end-rgb: 2, 5, 19;
+    --tile-border: conic-gradient(
+      #ffffff80,
+      #ffffff40,
+      #ffffff30,
+      #ffffff20,
+      #ffffff10,
+      #ffffff10,
+      #ffffff80
+    );
+
+    --callout-rgb: 20, 20, 20;
+    --callout-border-rgb: 108, 108, 108;
+    --card-rgb: 100, 100, 100;
+    --card-border-rgb: 200, 200, 200;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* This allow me to have the full width of the page without the initial padding/margin*/
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Acme;
+  min-width: 700px;
+}
+
+.splitdiv {
+  height: 100%;
+  width: 50%;
+}
+
+/* This part contains all of the left side of the screen */
+/* ----------------------------------------- */
+#leftdiv {
+  float: left;
+  background-color: #fafafa;
+  height: 932px;
+}
+
+#leftdivcard {
+  margin: 0 auto;
+  width: 50%;
+  background-color: white;
+  margin-top: 25vh;
+  transform: translateY(-50%);
+  box-shadow: 10px 10px 1px 0px rgba(78, 205, 196, 0.2);
+  border-radius: 10px;
+}
+
+#leftbutton {
+  background-color: #512cf3;
+  border-radius: 5px;
+  color: #fafafa;
+  margin-left: 350px;
+}
+
+/* ----------------------------------------- */
+
+/* This part contains all of the right side of the screen */
+/* ----------------------------------------- */
+#rightdiv {
+  float: right;
+  background-color: #cbcfcf;
+  height: 932px;
+}
+
+#rightdivcard {
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 50vh;
+  transform: translateY(-50%);
+  background-position: bottom;
+  background-size: 20px 2px;
+  background-repeat: repeat-x;
+}
+
+/* ----------------------------------------- */
+
+/* Basic styling */
+/* ----------------------------------------- */
+
+button {
+  outline: none !important;
+  font-family: Lobster;
+  margin-bottom: 15px;
+  border: none;
+  font-size: 20px;
+  padding: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: -15px;
+  cursor: pointer;
+}
+
+h1 {
+  font-family: Lobster;
+  color: #512cf3;
+  text-align: center;
+  font-size: 40px;
+}
+
+input {
+  font-family: Acme;
+  font-size: 16px;
+  font-family: 15px;
+}
+
+input {
+  width: 30%;
+  height: 20px;
+  padding: 16px;
+  margin-left: 1%;
+  margin-right: 2%;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  display: inline-block;
+  border: none;
+}
+
+input:focus {
+  outline: none !important;
+  border: 1px solid #512cf3;
+  box-shadow: 0 0 1px round #719ece;
+}
+
+/* ----------------------------------------- */
+
+.main {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+}
+
+.main-h2 {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.body-h1 {
+  padding-top: 20px;
+  text-align: center;
+  color: white;
+}
+
+.inner-p {
+  color: white;
+  text-align: center;
+}
+
+.main-align {
+  text-align: center;
+}
+
+.form-control {
+  margin-left: 15px;
+}
